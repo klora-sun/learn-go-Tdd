@@ -1,6 +1,8 @@
 package Perimeter
 
-import "testing"
+import (
+	"testing"
+)
 
 
 func TestPerimeter(t *testing.T){
@@ -18,6 +20,14 @@ func TestPerimeter(t *testing.T){
 		get := Perimeter(float64(getWidth),float64(getHeight))
 		want := 72
 		certainResult(t,get,float64(want))
+	})
+
+	t.Run("test Area",func(t *testing.T){
+		width := 12
+		height := 2 
+		get := Area(float64(width),float64(height))
+		expect :=24
+		certainResult(t,get,float64(expect))
 	})
 
 	
