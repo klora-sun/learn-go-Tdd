@@ -4,7 +4,6 @@ import (
 	"testing"
 )
 
-
 func TestPerimeter(t *testing.T){
 
 	certainResult := func(t *testing.T, get, want float64) {
@@ -27,6 +26,15 @@ func TestPerimeter(t *testing.T){
 		height := 2 
 		get := Area(float64(width),float64(height))
 		expect :=24
+		certainResult(t,get,float64(expect))
+	})
+
+		t.Run("test Area struct",func(t *testing.T){
+		rctangle := Rectangle{12.0, 6.0}
+
+
+		get := AreaStruct(rctangle)
+		expect :=72
 		certainResult(t,get,float64(expect))
 	})
 
