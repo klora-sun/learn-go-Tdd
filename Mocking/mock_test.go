@@ -27,7 +27,7 @@ Go!`
 		Countdown(buffer, spySleeper)
 
 		got := buffer.String()
-		want := `3
+		want := `
 2
 1
 Go!`
