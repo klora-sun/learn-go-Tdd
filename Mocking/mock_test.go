@@ -9,7 +9,8 @@ func TestMain(t *testing.T) {
 
 	t.Run("print 3", func(t *testing.T) {
 		buffer := &bytes.Buffer{}
-		Countdown(buffer)
+		configurableSleeper :=&ConfigurableSleeper{}
+		Countdown(buffer, configurableSleeper)
 		got := buffer.String()
 		want := `3
 2
